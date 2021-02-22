@@ -9,18 +9,19 @@ for (var i = 9; i < 18; i++) {
         $("#hour" + i).addClass("past");
     } else if (parseInt(currentHour) === i) {
         $("#hour" + i).addClass("present");
-    } else { 
+    } else {
         $("#hour" + i).addClass("future");
     }
+    var calendarEvent = localStorage.getItem("hour" + i);
+    if (calendarEvent) {
+        $("#hour" + i).val(calendarEvent);
+    }
 }
-// Save to local storage
-calendarEvents = [];
 
-
-$(".saveBtn").click(function() {
-    userInput = $("textarea").val();
-    key = $('td[id^="hour"]');
-
-    console.log(key);
-}); 
-  
+$(".saveBtn").on('click', function () {
+    var clickedHour = $(this).val();
+    var textArea = $("#hour" + clickedHour).val().trim();
+    if (textArea !== "") {
+        localStorage.setItem("hour" + clickedHour, textArea);
+    }
+})
