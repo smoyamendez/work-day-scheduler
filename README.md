@@ -1,4 +1,5 @@
-# work-day-scheduler
+# Work Day Scheduler ("work-day-scheduler")
+
 ## Table of Contents
 
 * [Description](#description)
@@ -9,32 +10,29 @@
 
 ## Description
 ---
-This repository ("password-generator") using HTML, CSS, and JavaScript to create a secure password based on the below requirements. Users are 
-able to choose the character types, including numbers, uppercase or lowercase letters, and symbols as well as a length between 8 and 128 total 
-characters. 
+This repository ("work-day-scheduler") uses HTML, CSS, and jQuery to create a calendar application 
+that allows users to save events for each hour of a 9 to 5 work day. It also uses the Moment.js library to work with date and time. 
 
 Deployed Website: https://smoyamendez.github.io/work-day-scheduler/
 
-![Password Generator Screenshot](password-generator-screenshot.png)
+![Password Generator Screenshot](images/work-day-screenshot.png)
 
 ## Requirements 
 ---
 ```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
+GIVEN I am using a daily planner to create a schedule
+WHEN I open the planner
+THEN the current day is displayed at the top of the calendar
+WHEN I scroll down
+THEN I am presented with timeblocks for standard business hours
+WHEN I view the timeblocks for that day
+THEN each timeblock is color coded to indicate whether it is in the past, present, or future
+WHEN I click into a timeblock
+THEN I can enter an event
+WHEN I click the save button for that timeblock
+THEN the text for that event is saved in local storage
+WHEN I refresh the page
+THEN the saved events persist
 ```
 
 ## Installation
